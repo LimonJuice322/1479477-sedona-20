@@ -34,6 +34,88 @@
         <img src="img/sedona-logo-text.svg" alt="Седона">
         <img src="img/sedona-photo.jpg" alt="Изображение природы Седоны">
       </section>
+
+      <section class="sedona-review">
+        <h2>Оставьте свой отзыв</h2>
+        <p class="sedona-review__description">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+        <form class="sedona-review__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="sedona-review__fieldset">
+            <legend class="sedona-review__legend">Представьтесь:</legend>
+            <ul class="sedona-review__list">
+              <li class="sedona-review__item">
+                <label class="sedona-review__label-name" for="user-first-name">Имя*:</label>
+                <input class="sedona-review__input-name" id="user-first-name" type="text" name="user-first-name" value="" placeholder="Петр">
+              </li>
+              <li class="sedona-review__item">
+                <label class="sedona-review__label-name" for="user-last-name">Фамилия*:</label>
+                <input class="sedona-review__input-name" id="user-last-name" type="text" name="user-last-name" value="" placeholder="Иванов">
+              </li>
+              <li class="sedona-review__item">
+                <label class="sedona-review__label-name" for="user-last-name-2">Отчество:</label>
+                <input class="sedona-review__input-name" id="user-last-name-2" type="text" name="user-last-name-2" value="" placeholder="Александрович">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="sedona-review__fieldset">
+            <legend class="sedona-review__legend">Контактная информация:</legend>
+            <ul class="sedona-review__list">
+              <li class="sedona-review__item">
+                <label class="sedona-review__label-contacts" for="user-tel">Контактный телефон*:</label>
+                <input class="sedona-review__input-contacts" id="user-tel" type="tel" name="user-tel" value="" placeholder="Введите телефон">
+              </li>
+              <li class="sedona-review__item">
+                <label class="sedona-review__label-contacts" for="user-emal">Электронная почта*:</label>
+                <input class="sedona-review__input-contacts" id="user-emal" type="email" name="user-email" value="" placeholder="Введите e-mail">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="sedona-review__fieldset">
+            <legend class="sedona-review__legend">Ваше общее впечатление:</legend>
+            <ul class="sedona-review__list">
+              <li class="sedona-review__item">
+                <input class="sedona-review__input-impression" checked id="impression-positive" type="radio" name="user-impression" value="positive">
+                <label class="sedona-review__label-impression" for="impression-positive">Скорее положительное:</label>
+              </li>
+              <li class="sedona-review__item">
+                <input class="sedona-review__input-impression" id="impression-negative" type="radio" name="user-impression" value="negative">
+                <label class="sedona-review__label-impression" for="impression-negative">Скорее отрицательное:</label>
+              </li>
+              <li class="sedona-review__item">
+                <input class="sedona-review__input-impression" id="impression-unknow" type="radio" name="user-impression" value="unknow">
+                <label class="sedona-review__label-impression" for="impression-unknow">Затрудняюсь ответить:</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="sedona-review__fieldset">
+            <legend class="sedona-review__legend">Посещенные достопримечательности:</legend>
+            <ul class="sedona-review__list">
+              <li class="sedona-review__item">
+                <input class="sedona-review__input-attractions" id="attractions-devil" checked type="checkbox" name="Мост Дьявола" value="">
+                <label class="sedona-review__label-attractions" for="attractions-devil">Мост Дьявола:</label>
+              </li>
+              <li class="sedona-review__item">
+                <input class="sedona-review__input-attractions" id="attractions-bell" checked type="checkbox" name="Гора-Колокол" value="n">
+                <label class="sedona-review__label-attractions" for="attractions-bell">Гора-Колокол:</label>
+              </li>
+              <li class="sedona-review__item">
+                <input class="sedona-review__input-attractions" id="attractions-park" checked type="checkbox" name="Слайд-парк" value="">
+                <label class="sedona-review__label-attractions" for="attractions-park">Слайд-парк:</label>
+              </li>
+              <li class="sedona-review__item">
+                <input class="sedona-review__input-attractions" id="attractions-rocks" type="checkbox" name="Красные скалы" value="">
+                <label class="sedona-review__label-attractions" for="attractions-rocks">Красные скалы:</label>
+              </li>
+            </ul>
+          </fieldset>
+          <p class="sedona-review__review-text">
+            <label class="sedona-review__label-review" for="review-text">Опишите свои эмоции:</label>
+            <textarea class="sedona-review__textarea" id="review-text" rows="8" cols="80" placeholder="опишите подробно все свои восторги"></textarea>
+          </p>
+          <button class="sedona-review__btn-submit" type="submit">Отправить отзыв</button>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -55,5 +137,21 @@
         Разработано
       </p>
     </footer>
+
+    <section class="modal modal--success">
+      <b class="modal__message">Что-то пошло не так!</b>
+      <p class="modal__description">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </p>
+      <button class="modal__btn-close" type="button">Ок</button>
+    </section>
+
+    <section class="modal modal--failure">
+      <b class="modal__message">Ваш отзыв отправлен!</b>
+      <p class="modal__description">
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+      </p>
+      <button class="modal__btn-close" type="button">Закрыть окно</button>
+    </section>
   </body>
 </html>
