@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsans.woff2") format("woff2"),
+    url("fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsansbold.woff2") format("woff2"),
+    url("fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.page__body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  font-family: "PT Sans", "Arial", sans-serif;
+  .set-font();
+  color: @basic-black;
+  background-color: @basic-white;
+}
