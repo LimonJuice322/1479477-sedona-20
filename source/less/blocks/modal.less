@@ -1,0 +1,31 @@
+.modal__message {
+  display: block;
+  text-align: center;
+  .set-font(18px, 26px, 700);
+  text-transform: uppercase;
+}
+
+.modal__description {
+  text-align: center;
+  .set-font(@line-height: 24px);
+  text-transform: uppercase;
+}
+
+.modal__btn-close {
+  cursor: pointer;
+  text-align: center;
+  .set-font(21px, 26px, 700);
+  text-transform: uppercase;
+  border: none;
+  color: @basic-white;
+  background-color: @basic-blue-light;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-blue;
+  }
+
+  &:active {
+    background-color: @basic-blue-dark;
+  }
+}

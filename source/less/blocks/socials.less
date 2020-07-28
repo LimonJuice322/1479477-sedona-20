@@ -10,4 +10,27 @@
   width: 46px;
   height: 48px;
   background-color: @basic-blue-light;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-blue;
+  }
+
+  &:active {
+    background-color: @basic-blue-dark;
+  }
+
+  &--twitter {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube {
+    background-image: url("../img/icon-youtube.svg");
+  }
 }
