@@ -1,0 +1,125 @@
+.sedona-review__header {
+  text-align: center;
+  .set-font(18px, 26px, 700);
+  text-transform: uppercase;
+}
+
+.sedona-review__description {
+  text-align: center;
+  .set-font(@line-height: 24px);
+  text-transform: uppercase;
+}
+
+.sedona-review__fieldset {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+}
+
+.sedona-review__legend {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  .set-font(18px, 26px, 700);
+  text-transform: uppercase;
+}
+
+.sedona-review__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sedona-review__label {
+  .set-font(@line-height: 26px);
+  text-transform: uppercase;
+
+  &--contacts {
+    display: block;
+  }
+}
+
+.sedona-review__input {
+  box-sizing: border-box;
+  .set-font(18px, 26px, 700);
+  padding-top: 18px;
+  padding-left: 22px;
+  padding-bottom: 14px;
+  background-color: @basic-grey;
+  border: 4px solid transparent;
+
+  &::placeholder {
+    color: @basic-black;
+  }
+
+  &:hover {
+    background-color: @basic-grey-dark;
+  }
+
+  &:focus {
+    outline: none;
+    border: 4px solid @basic-grey-dark;
+    background-color: @basic-white;
+  }
+}
+
+.sedona-review__label-impression,
+.sedona-review__label-attractions {
+  .set-font(18px, 26px, 700);
+}
+
+.sedona-review__label-review {
+  display: block;
+  text-align: center;
+  .set-font(18px, 26px, 700);
+  text-transform: uppercase;
+}
+
+.sedona-review__textarea {
+  display: block;
+  box-sizing: border-box;
+  .set-font(18px, 26px, 700);
+  width: 287px;
+  resize: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 13px;
+  padding-left: 21px;
+  padding-right: 23px;
+  border: 4px solid transparent;
+  background-color: @basic-grey;
+
+  &::placeholder {
+    color: @basic-black;
+  }
+
+  &:hover {
+    background-color: @basic-grey-dark;
+  }
+
+  &:focus {
+    outline: none;
+    border: 4px solid @basic-grey-dark;
+    background-color: @basic-white;
+  }
+}
+
+.sedona-review__btn-submit {
+  cursor: pointer;
+  text-align: center;
+  .set-font(21px, 26px, 700);
+  text-transform: uppercase;
+  border: none;
+  color: @basic-white;
+  background-color: @basic-blue-light;
+
+  &:hover,
+  &:focus {
+    background-color: @basic-blue;
+  }
+
+  &:active {
+    background-color: @basic-blue-dark;
+  }
+}
