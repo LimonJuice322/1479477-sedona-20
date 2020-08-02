@@ -4,16 +4,23 @@
 }
 
 .promo__presentation {
+  width: 285px;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
+
+  @media(min-width: @tablet-width) {
+    width: 520px;
+  }
 }
 
 .promo__description {
+  width: 285px;
   padding: 0;
-  margin: 0;
+  padding-top: 26px;
+  margin: 0 auto;
   text-align: center;
   .set-font(@line-height: 26px);
   text-transform: uppercase;
