@@ -1,5 +1,15 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 .page-footer__hashtag {
-  text-align: center;
+  width: 166px;
   .set-font(21px, 26px, 700);
   text-transform: uppercase;
   padding: 0;
