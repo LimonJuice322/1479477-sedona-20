@@ -1,7 +1,31 @@
+.sedona-review {
+  position: relative;
+}
+
+.sedona-review__wrapper {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    outline: 2px dotted green;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: calc(100% - 240px);
+    margin: 0 auto;
+  }
+}
+
 .sedona-review__header {
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .set-font(30px, 26px, 700);
+  }
 }
 
 .sedona-review__description {
@@ -10,11 +34,46 @@
   text-transform: uppercase;
 }
 
+.sedona-review__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 58px;
+  }
+}
+
 .sedona-review__fieldset {
+  outline: 2px dotted red;
   padding: 0;
   margin: 0;
   width: 100%;
   border: none;
+
+  &:nth-child(2) {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+  }
+
+  &:nth-child(4) {
+    @media (min-width: @tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
 }
 
 .sedona-review__legend {
@@ -29,6 +88,21 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  &--checkboxes {
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &--checkboxes,
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 
 .sedona-review__label {
@@ -75,6 +149,13 @@
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
 }
+.sedona-review__review-text {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
 
 .sedona-review__textarea {
   display: block;
@@ -121,5 +202,23 @@
 
   &:active {
     background-color: @basic-blue-dark;
+  }
+}
+
+.sedona-review__add-info {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  .set-font(@line-height: 26px);
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    right: 120px;
   }
 }
