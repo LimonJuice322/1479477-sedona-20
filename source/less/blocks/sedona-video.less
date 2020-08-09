@@ -1,12 +1,25 @@
 .sedona-video__question {
+  margin: 0 auto;
+  width: 266px;
   display: block;
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .set-font(30px, 26px, 700);
+    width: 445px;
+  }
 }
 
 .sedona-video__description {
+  margin: 0 auto;
+  width: 266px;
   text-align: center;
   .set-font(@line-height: 24px);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 445px;
+  }
 }
