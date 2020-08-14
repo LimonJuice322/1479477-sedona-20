@@ -1,6 +1,7 @@
 .page-footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -13,5 +14,10 @@
   .set-font(21px, 26px, 700);
   text-transform: uppercase;
   padding: 0;
+  padding-top: 39px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }

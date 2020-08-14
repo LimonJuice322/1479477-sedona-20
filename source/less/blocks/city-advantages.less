@@ -6,25 +6,149 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
   color: @basic-black;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     flex-direction: row;
     grid-column-start: 1;
     grid-column-end: 4;
   }
 }
 
+.city-advantages__item {
+  outline: 2px dotted yellow;
+
+  &--house {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 21px;
+      width: 39px;
+      height: 37px;
+      background-image: url("../img/icon-house.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        width: 75px;
+        height: 72px;
+        top: 60px;
+        left: 90px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 75px;
+        height: 73px;
+        top: 59px;
+        left: 161px;
+      }
+    }
+  }
+
+  &--gift {
+    position: relative;
+    order: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 25px;
+      width: 32px;
+      height: 38px;
+      background-image: url("../img/icon-gift.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        width: 64px;
+        height: 75px;
+        top: 57px;
+        left: 95px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 63px;
+        height: 75px;
+        top: 57px;
+        left: 167px;
+      }
+    }
+  }
+
+  &--food {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 18px;
+      width: 40px;
+      height: 35px;
+      background-image: url("../img/icon-burger.svg");
+      background-position: 0 0;
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        width: 76px;
+        height: 68px;
+        top: 63px;
+        left: 89px;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 76px;
+        height: 69px;
+        top: 63px;
+        left: 161px;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-grow: 1;
+  }
+}
+
 .city-advantages__header {
   padding: 0;
   margin: 0;
-  text-align: center;
+  padding-top: 26px;
+  padding-left: 69px;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    padding-top: 158px;
+    padding-left: 0;
+  }
 }
 
 .city-advantages__description {
-  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 15px;
+  padding-left: 69px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 175px;
+    text-align: center;
+    padding-top: 21px;
+    padding-left: 0;
+    padding-bottom: 59px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+  }
 }

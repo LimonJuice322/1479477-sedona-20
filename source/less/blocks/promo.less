@@ -4,9 +4,10 @@
 }
 
 .promo__presentation {
-  width: 285px;
+  width: 295px;
   padding: 0;
   margin: 0 auto;
+  padding-bottom: 26px;
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
@@ -17,11 +18,18 @@
 }
 
 .promo__description {
-  width: 285px;
+  width: 295px;
   padding: 0;
   padding-top: 26px;
+  padding-bottom: 27px;
   margin: 0 auto;
+  color: @basic-black-light;
   text-align: center;
   .set-font(@line-height: 26px);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 550px;
+    padding-bottom: 53px;
+  }
 }
