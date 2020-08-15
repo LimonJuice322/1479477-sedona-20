@@ -3,9 +3,6 @@
 }
 
 .sedona-review__wrapper {
-  width: calc(100% - 40px);
-  margin: 0 auto;
-
   @media (min-width: @tablet-width) {
     outline: 2px dotted green;
     width: calc(100% - 120px);
@@ -41,16 +38,31 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 58px;
+    grid-template-rows: min-content min-content min-content min-content 58px;
   }
 }
 
 .sedona-review__fieldset {
-  outline: 2px dotted red;
+  position: relative;
   padding: 0;
+  padding-top: 65px;
   margin: 0;
   width: 100%;
   border: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 100%;
+    background-color: @basic-grey-dark;
+
+    @media (min-width: @tablet-width) {
+      height: 0;
+    }
+  }
 
   &:nth-child(2) {
     @media (min-width: @tablet-width) {
@@ -77,17 +89,76 @@
 }
 
 .sedona-review__legend {
+  outline: 2px dotted yellow;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
   padding: 0;
   margin: 0;
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .set-font(21px, 26px, 700);
+    top: 0;
+    width: 348px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      top: 0;
+      left: 0;
+      background-color: @basic-grey-ultradark-;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 1px;
+      top: 0;
+      left: 0;
+      background-color: @basic-grey-ultradark-;
+    }
+  }
 }
 
 .sedona-review__list {
   list-style: none;
   padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-top: 55px;
+
+    &--impression {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 292px;
+        width: 1px;
+        background-color: @basic-grey-ultradark-;
+      }
+    }
+
+    &--name {
+      padding-left: 58px;
+    }
+  }
 
   &--checkboxes {
     @media (min-width: @tablet-width) {
@@ -105,16 +176,131 @@
   }
 }
 
+.sedona-review__item {
+  &--name {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+
+    &:last-child {
+      padding-bottom: 25px;
+    }
+  }
+
+  &--contacts {
+    padding-bottom: 14px;
+
+    @media (min-width: @desktop-width) {
+      outline: 2px dotted black;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    &:last-child {
+      padding-bottom: 28px;
+    }
+  }
+
+  &--impression {
+    padding-bottom: 11px;
+    outline: 2px dotted blue;
+
+    &:last-child {
+      padding-bottom: 26px;
+    }
+  }
+
+  &--attractions {
+    &:last-child {
+      padding-bottom: 25px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--column-left {
+      min-width: 259px;
+      margin-left: auto;
+    }
+
+    &--column-right {
+      min-width: 259px;
+      margin-right: auto;
+    }
+  }
+}
+
 .sedona-review__label {
+  display: block;
   .set-font(@line-height: 26px);
   text-transform: uppercase;
+  outline: 2px dotted red;
+
+  &--name {
+    padding-right: 8px;
+  }
 
   &--contacts {
     display: block;
+    padding-bottom: 8px;
+    padding-left: 22px;
+
+    @media (min-width: @desktop-width) {
+      padding: 0;
+    }
+  }
+
+  &--tel {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -66px;
+      right: 0;
+      width: 58px;
+      height: 66px;
+      background-color: @basic-grey-extradark;
+      background-image: url("../img/icon-phone.svg");
+      background-position: 21px 20px;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        right: -316px;
+        top: -20px
+      }
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -66px;
+      right: 0;
+      width: 58px;
+      height: 66px;
+      background-color: @basic-grey-extradark;
+      background-image: url("../img/icon-mail.svg");
+      background-position: 21px 23px;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: @desktop-width) {
+      &::after {
+        right: -316px;
+        top: -20px
+      }
+    }
   }
 }
 
 .sedona-review__input {
+  width: 100%;
   box-sizing: border-box;
   .set-font(18px, 26px, 700);
   padding-top: 18px;
@@ -122,6 +308,10 @@
   padding-bottom: 14px;
   background-color: @basic-grey;
   border: 4px solid transparent;
+
+  @media (min-width: @desktop-width) {
+    width: 258px;
+  }
 
   &::placeholder {
     color: @basic-black;
@@ -143,7 +333,120 @@
   .set-font(18px, 26px, 700);
 }
 
+.sedona-review__label-impression {
+  display: block;
+  outline: 2px dotted green;
+  position: relative;
+  padding-left: 74px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 58px;
+    border: 5px solid @basic-grey;
+    background-color: @basic-grey;
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    &::before {
+      cursor: pointer;
+      background-color: @basic-grey-dark;
+      border-color: @basic-grey-dark;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @basic-grey-ultradark;
+      border-color: @basic-grey-ultradark;
+    }
+  }
+}
+
+.sedona-review__label-attractions {
+  display: block;
+  outline: 2px dotted green;
+  position: relative;
+  padding-left: 74px;
+  padding-top: 19px;
+  padding-bottom: 24px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    border: 5px solid @basic-grey;
+    background-color: @basic-grey;
+    border-radius: 5%;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    &::before {
+      cursor: pointer;
+      background-color: @basic-grey-dark;
+      border-color: @basic-grey-dark;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @basic-grey-ultradark;
+      border-color: @basic-grey-ultradark;
+    }
+  }
+}
+
+.sedona-review__input-impression {
+  &:checked + .sedona-review__label-impression {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle r='12' cx='12' cy='12' fill='%23333333'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: 12px 12px;
+    }
+
+    &:active {
+      &::before {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle r='12' cx='12' cy='12' fill-opacity='0.3' fill='%23333333'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}
+
+.sedona-review__input-attractions {
+  &:checked + .sedona-review__label-attractions {
+    &::before {
+      background-image: url("../img/icon-tick.svg");
+      background-repeat: no-repeat;
+      background-position: 12px 15px;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
 .sedona-review__label-review {
+  padding-bottom: 15px;
   display: block;
   text-align: center;
   .set-font(18px, 26px, 700);
@@ -151,6 +454,11 @@
 }
 
 .sedona-review__review-text {
+  border-top: 1px solid @basic-grey-dark;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -162,10 +470,11 @@
   display: block;
   box-sizing: border-box;
   .set-font(18px, 26px, 700);
-  width: 287px;
+  width: 100%;
   resize: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 51px;
   padding-top: 13px;
   padding-left: 21px;
   padding-right: 23px;
@@ -188,6 +497,10 @@
 }
 
 .sedona-review__btn-submit {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 19px;
+  padding-bottom: 13px;
   cursor: pointer;
   text-align: center;
   .set-font(21px, 26px, 700);

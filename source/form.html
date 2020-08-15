@@ -44,16 +44,16 @@
           <form class="sedona-review__form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="sedona-review__fieldset">
               <legend class="sedona-review__legend">Представьтесь:</legend>
-              <ul class="sedona-review__list">
-                <li class="sedona-review__item">
+              <ul class="sedona-review__list sedona-review__list--name">
+                <li class="sedona-review__item sedona-review__item--name">
                   <label class="sedona-review__label sedona-review__label--name" for="user-first-name">Имя*:</label>
                   <input class="sedona-review__input sedona-review__input--name" id="user-first-name" type="text" name="user-first-name" value="" placeholder="Петр">
                 </li>
-                <li class="sedona-review__item">
+                <li class="sedona-review__item sedona-review__item--name">
                   <label class="sedona-review__label sedona-review__label--name" for="user-last-name">Фамилия*:</label>
                   <input class="sedona-review__input sedona-review__input--name" id="user-last-name" type="text" name="user-last-name" value="" placeholder="Иванов">
                 </li>
-                <li class="sedona-review__item">
+                <li class="sedona-review__item sedona-review__item--name">
                   <label class="sedona-review__label sedona-review__label--name" for="user-last-name-2">Отчество:</label>
                   <input class="sedona-review__input sedona-review__input--name" id="user-last-name-2" type="text" name="user-last-name-2" value="" placeholder="Александрович">
                 </li>
@@ -62,29 +62,29 @@
             <fieldset class="sedona-review__fieldset">
               <legend class="sedona-review__legend">Контактная информация:</legend>
               <ul class="sedona-review__list sedona-review__list--contacts">
-                <li class="sedona-review__item">
-                  <label class="sedona-review__label sedona-review__label--contacts" for="user-tel">Контактный телефон*:</label>
+                <li class="sedona-review__item sedona-review__item--contacts">
+                  <label class="sedona-review__label sedona-review__label--contacts sedona-review__label--tel" for="user-tel">Контактный телефон*:</label>
                   <input class="sedona-review__input sedona-review__input--contacts" id="user-tel" type="tel" name="user-tel" value="" placeholder="Введите телефон">
                 </li>
-                <li class="sedona-review__item">
-                  <label class="sedona-review__label sedona-review__label--contacts" for="user-emal">Электронная почта*:</label>
+                <li class="sedona-review__item sedona-review__item--contacts">
+                  <label class="sedona-review__label sedona-review__label--contacts sedona-review__label--email" for="user-emal">Электронная почта*:</label>
                   <input class="sedona-review__input sedona-review__input--contacts" id="user-emal" type="email" name="user-email" value="" placeholder="Введите e-mail">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="sedona-review__fieldset">
               <legend class="sedona-review__legend">Ваше общее впечатление:</legend>
-              <ul class="sedona-review__list">
-                <li class="sedona-review__item">
-                  <input class="sedona-review__input-impression" checked id="impression-positive" type="radio" name="user-impression" value="positive">
+              <ul class="sedona-review__list sedona-review__list--impression">
+                <li class="sedona-review__item sedona-review__item--impression">
+                  <input class="sedona-review__input-impression visually-hidden" checked id="impression-positive" type="radio" name="user-impression" value="positive">
                   <label class="sedona-review__label-impression" for="impression-positive">Скорее положительное</label>
                 </li>
-                <li class="sedona-review__item">
-                  <input class="sedona-review__input-impression" id="impression-negative" type="radio" name="user-impression" value="negative">
+                <li class="sedona-review__item sedona-review__item--impression">
+                  <input class="sedona-review__input-impression visually-hidden" id="impression-negative" type="radio" name="user-impression" value="negative">
                   <label class="sedona-review__label-impression" for="impression-negative">Скорее отрицательное</label>
                 </li>
-                <li class="sedona-review__item">
-                  <input class="sedona-review__input-impression" id="impression-unknow" type="radio" name="user-impression" value="unknow">
+                <li class="sedona-review__item sedona-review__item--impression">
+                  <input class="sedona-review__input-impression visually-hidden" id="impression-unknow" type="radio" name="user-impression" value="unknow">
                   <label class="sedona-review__label-impression" for="impression-unknow">Затрудняюсь ответить</label>
                 </li>
               </ul>
@@ -92,20 +92,20 @@
             <fieldset class="sedona-review__fieldset">
               <legend class="sedona-review__legend">Посещенные достопримечательности:</legend>
               <ul class="sedona-review__list sedona-review__list--checkboxes">
-                <li class="sedona-review__item">
-                  <input class="sedona-review__input-attractions" id="attractions-devil" checked type="checkbox" name="Мост Дьявола" value="">
+                <li class="sedona-review__item sedona-review__item--column-left">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-devil" checked type="checkbox" name="Мост Дьявола" value="">
                   <label class="sedona-review__label-attractions" for="attractions-devil">Мост Дьявола</label>
                 </li>
-                <li class="sedona-review__item">
-                  <input class="sedona-review__input-attractions" id="attractions-bell" checked type="checkbox" name="Гора-Колокол" value="n">
+                <li class="sedona-review__item sedona-review__item--column-right">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-bell" checked type="checkbox" name="Гора-Колокол" value="n">
                   <label class="sedona-review__label-attractions" for="attractions-bell">Гора-Колокол</label>
                 </li>
-                <li class="sedona-review__item">
-                  <input class="sedona-review__input-attractions" id="attractions-park" checked type="checkbox" name="Слайд-парк" value="">
+                <li class="sedona-review__item sedona-review__item--column-left">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-park" checked type="checkbox" name="Слайд-парк" value="">
                   <label class="sedona-review__label-attractions" for="attractions-park">Слайд-парк</label>
                 </li>
-                <li class="sedona-review__item">
-                  <input class="sedona-review__input-attractions" id="attractions-rocks" type="checkbox" name="Красные скалы" value="">
+                <li class="sedona-review__item sedona-review__item--column-right">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-rocks" type="checkbox" name="Красные скалы" value="">
                   <label class="sedona-review__label-attractions" for="attractions-rocks">Красные скалы</label>
                 </li>
               </ul>
