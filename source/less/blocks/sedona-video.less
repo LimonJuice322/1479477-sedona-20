@@ -1,5 +1,12 @@
+.sedona-video {
+  width: 648px;
+  margin: 0 auto;
+}
+
 .sedona-video__question {
   margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 26px;
   width: 266px;
   display: block;
   text-align: center;
@@ -9,17 +16,31 @@
   @media (min-width: @tablet-width) {
     .set-font(30px, 26px, 700);
     width: 445px;
+    padding-top: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font(30px, 26px, 700);
+    width: 445px;
+    padding-top: 63px;
   }
 }
 
 .sedona-video__description {
   margin: 0 auto;
+  padding-bottom: 33px;
   width: 266px;
   text-align: center;
   .set-font(@line-height: 24px);
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    width: 445px;
+    width: 505px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 505px;
+    padding-bottom: 65px;
   }
 }
