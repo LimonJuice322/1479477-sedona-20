@@ -94,10 +94,25 @@
   margin: 0;
 }
 
-.photo-video__picture {
+.photo-video__img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+
+    &--first {
+      width: 648px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+
+    &--first {
+      width: 1200px;
+    }
+  }
 }
 
 .photo-video__photo-header {

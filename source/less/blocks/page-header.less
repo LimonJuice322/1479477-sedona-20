@@ -4,14 +4,29 @@
 
 .page-header__logo {
   position: absolute;
+  z-index: 3;
   bottom: -84px + 56px;
   left: calc((100% - 102px) / 2);
-  width: 102px;
   height: 84px;
   color: @basic-black;
   text-decoration: none;
 
   @media (min-width: @tablet-width) {
     top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: calc((100% - 187px) / 2);
+    height: 97px;
+  }
+}
+
+.page-header__logo-img {
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: auto;
   }
 }
