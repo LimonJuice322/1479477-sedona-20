@@ -1,5 +1,4 @@
 .sedona-video {
-  width: 320px;
   margin: 0 auto;
 }
 
@@ -42,5 +41,21 @@
   @media (min-width: @tablet-width) {
     width: 505px;
     padding-bottom: 65px;
+  }
+}
+
+.sedona-video__video {
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+  height: 201px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
   }
 }
