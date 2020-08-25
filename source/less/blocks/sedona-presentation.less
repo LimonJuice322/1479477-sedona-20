@@ -1,15 +1,33 @@
 .sedona-presentation__list {
+  position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background-image: url("../img/bg-triangle.svg");
+    background-position: center -21px;
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
 .sedona-presentation__item {
+  z-index: 2;
   padding: 0;
   margin: 0;
   color: @basic-black;
@@ -32,6 +50,7 @@
 }
 
 .sedona-presentation__header {
+  outline: 2px dotted red;
   padding: 0;
   margin: 0;
   padding-top: 55px;
@@ -40,11 +59,38 @@
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
 
+  &--incomplete {
+    @media (max-width: @tablet-width) {
+      padding-top: 26px;
+    }
+  }
+
+  &--full {
+    padding-top: 39px;
+
+    @media (min-width: @desktop-width) {
+      width: 140px;
+      padding-top: 47px;
+      padding-bottom: 14px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: 40px;
+    padding-bottom: 20px;
     margin: 0 auto;
-    width: 192px;
+    width: 152px;
     .set-font(21px, 26px, 700);
+
+    &--pos-lower {
+      padding-top: 52px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 152px;
+    padding-top: 43px;
+    padding-bottom: 14px;
   }
 }
 
@@ -57,6 +103,10 @@
   @media (min-width: @tablet-width) {
     padding-bottom: 21px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 21px;
+  }
 }
 
 .sedona-presentation__description {
@@ -67,14 +117,22 @@
   text-align: center;
   text-transform: uppercase;
 
+  &--incomplete {
+    @media (max-width: @tablet-width) {
+      padding-bottom: 33px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     outline: 2px dotted yellow;
+    padding-bottom: 45px;
     width: 215px;
   }
 
   @media (min-width: @desktop-width) {
     outline: 2px dotted yellow;
-    width: 295px;
+    width: 285px;
+    padding-bottom: 62px;
   }
 }
 
@@ -94,6 +152,8 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
+    position: relative;
+    height: 256px;
     grid-column-start: 2;
     grid-column-end: 4;
   }
@@ -111,9 +171,18 @@
 }
 
 .sedona-presentation__img {
+  outline: 2px dotted grey;
+  position: relative;
   display: block;
   width: 320px;
   margin: 0 auto;
+
+  &--pos-center {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      top: -74px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 512px;

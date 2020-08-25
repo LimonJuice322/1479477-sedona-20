@@ -22,7 +22,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 57px;
-    padding-bottom: 26px;
+    padding-bottom: 35px;
     width: 435px;
     .set-font(30px, 26px, 700);
   }
@@ -32,10 +32,16 @@
   margin: 0 auto;
   padding: 0;
   padding-bottom: 27px;
-  width: 261px;
+  width: 286px;
   text-align: center;
   .set-font(@line-height: 24px);
   text-transform: uppercase;
+
+  br {
+    @media (max-width: @tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     width: 485px;
@@ -60,6 +66,16 @@
   text-transform: uppercase;
   color: @basic-white;
   background-color: @basic-blue-light;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: @basic-blue;
+  }
+
+  &:active {
+    background-color: @basic-blue-dark;
+  }
 
   @media (min-width: @tablet-width) {
     width: 458px;
