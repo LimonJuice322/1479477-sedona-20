@@ -1,4 +1,5 @@
 .socials {
+  outline: 2px dotted green;
   width: 150px;
   list-style: none;
   display: flex;
@@ -11,6 +12,7 @@
 
 .socials__link {
   display: block;
+  position: relative;
   width: 46px;
   height: 48px;
   background-color: @basic-blue-light;
@@ -25,16 +27,13 @@
   &:active {
     background-color: @basic-blue-dark;
   }
+}
 
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
-  }
-
-  &--facebook {
-    background-image: url("../img/icon-facebook.svg");
-  }
-
-  &--youtube {
-    background-image: url("../img/icon-youtube.svg");
-  }
+.socials__link-icon {
+  position: absolute;
+  fill: @basic-white;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
