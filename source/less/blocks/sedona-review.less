@@ -5,30 +5,51 @@
 .sedona-review__wrapper {
   @media (min-width: @tablet-width) {
     outline: 2px dotted green;
-    width: calc(100% - 120px);
+    width: calc(768px - 120px);
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    width: calc(100% - 240px);
+    outline: 2px dotted orange;
+    width: calc(1200px - 240px);
     margin: 0 auto;
   }
 }
 
 .sedona-review__header {
+  margin: 0;
+  padding: 0;
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
+  outline: 2px dotted blue;
+  padding-top: 36px;
+  padding-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     .set-font(30px, 26px, 700);
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 114px;
   }
 }
 
 .sedona-review__description {
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 16px;
   text-align: center;
   .set-font(@line-height: 24px);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    outline: 2px dotted black;
+    width: 435px;
+    padding-bottom: 60px;
+  }
 }
 
 .sedona-review__form {
@@ -43,6 +64,7 @@
 }
 
 .sedona-review__fieldset {
+  outline: 2px dotted red;
   position: relative;
   padding: 0;
   padding-top: 65px;
@@ -64,6 +86,56 @@
     }
   }
 
+  &--decor-line {
+    &::after {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: 30px;
+        right: 0;
+        background-color: @basic-grey-ultradark-;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 280px;
+      }
+    }
+
+    &::before {
+      @media (min-width: @tablet-width) {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: 30px;
+        left: 0;
+        background-color: @basic-grey-ultradark-;
+      }
+
+      @media (min-width: @desktop-width) {
+        width: 280px;
+      }
+    }
+  }
+
+  &:nth-child(1) {
+    @media (min-width: @tablet-width) {
+      padding-bottom: 27px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 43px;
+
+      .sedona-review__legend {
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
+    }
+  }
+
   &:nth-child(2) {
     @media (min-width: @tablet-width) {
       grid-column-start: 1;
@@ -77,6 +149,19 @@
       grid-column-end: 2;
       grid-row-start: 1;
       grid-row-end: 2;
+
+      .sedona-review__legend {
+        text-align: left;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 43px;
+
+      .sedona-review__legend {
+        top: 0;
+        text-align: center;
+      }
     }
   }
 
@@ -85,12 +170,19 @@
       grid-column-start: 1;
       grid-column-end: 3;
     }
+
+    @media (min-width: @desktop-width) {
+      .sedona-review__legend {
+        left: -20px;
+      }
+    }
   }
 }
 
 .sedona-review__legend {
   outline: 2px dotted yellow;
   position: absolute;
+  width: 320px;
   top: 20px;
   left: 0;
   right: 0;
@@ -102,35 +194,14 @@
 
   @media (min-width: @tablet-width) {
     .set-font(21px, 26px, 700);
-    top: 0;
-    width: 348px;
+    top: 20px;
+    text-align: center;
     margin: 0 auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 280px;
-      height: 1px;
-      top: 0;
-      left: 0;
-      background-color: @basic-grey-ultradark-;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 280px;
-      height: 1px;
-      top: 0;
-      left: 0;
-      background-color: @basic-grey-ultradark-;
-    }
   }
 }
 
 .sedona-review__list {
+  outline: 2px dotted grey;
   list-style: none;
   padding: 0;
   padding-left: 20px;
@@ -139,7 +210,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    padding-top: 55px;
+    padding-top: 40px;
 
     &--impression {
       position: relative;
@@ -148,7 +219,7 @@
         content: "";
         position: absolute;
         right: 0;
-        top: 0;
+        top: -30px;
         height: 292px;
         width: 1px;
         background-color: @basic-grey-ultradark-;
@@ -160,10 +231,19 @@
     }
   }
 
+
   &--checkboxes {
+    padding-top: 20px;
+
     @media (min-width: @tablet-width) {
+      padding-top: 53px;
+
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-content: space-between;
     }
   }
 
@@ -172,6 +252,16 @@
     @media (min-width: @desktop-width) {
       display: flex;
       flex-direction: row;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 52px;
     }
   }
 }
@@ -185,10 +275,18 @@
     &:last-child {
       padding-bottom: 25px;
     }
+
+    @media (min-width: @desktop-width) {
+      padding-left: 20px;
+    }
   }
 
   &--contacts {
     padding-bottom: 14px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 25px;
+    }
 
     @media (min-width: @desktop-width) {
       outline: 2px dotted black;
@@ -199,6 +297,10 @@
 
     &:last-child {
       padding-bottom: 28px;
+
+      @media (min-width: @tablet-width) {
+        padding-bottom: 52;
+      }
     }
   }
 
@@ -219,13 +321,25 @@
 
   @media (min-width: @tablet-width) {
     &--column-left {
+      padding-left: 90px;
       min-width: 259px;
       margin-left: auto;
     }
 
     &--column-right {
-      min-width: 259px;
       margin-right: auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--column-left {
+      padding-left: 0;
+      min-width: auto;
+      margin-left: 0;
+    }
+
+    &--column-right {
+      margin-right: 0;
     }
   }
 }
@@ -238,6 +352,10 @@
 
   &--name {
     padding-right: 8px;
+
+    @media (min-width: @desktop-width) {
+      padding-right: 13px;
+    }
   }
 
   &--contacts {
@@ -256,10 +374,10 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -66px;
+      bottom: -56px;
       right: 0;
       width: 58px;
-      height: 66px;
+      height: 56px;
       background-color: @basic-grey-extradark;
       background-image: url("../img/icon-phone.svg");
       background-position: 21px 20px;
@@ -267,9 +385,34 @@
     }
 
     @media (min-width: @desktop-width) {
+      display: none;
+
       &::after {
         right: -316px;
         top: -20px;
+      }
+    }
+  }
+
+  &--tel-short {
+    display: none;
+    position: relative;
+
+    @media (min-width: @desktop-width) {
+      padding-right: 16px;
+      display: block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -316px;
+        top: -17px;
+        width: 58px;
+        height: 58px;
+        background-color: @basic-grey-extradark;
+        background-image: url("../img/icon-phone.svg");
+        background-position: 21px 20px;
+        background-repeat: no-repeat;
       }
     }
   }
@@ -280,10 +423,10 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -66px;
+      bottom: -56px;
       right: 0;
       width: 58px;
-      height: 66px;
+      height: 56px;
       background-color: @basic-grey-extradark;
       background-image: url("../img/icon-mail.svg");
       background-position: 21px 23px;
@@ -291,9 +434,12 @@
     }
 
     @media (min-width: @desktop-width) {
+      padding-left: 75px;
+      padding-right: 21px;
+
       &::after {
         right: -316px;
-        top: -20px;
+        top: -15px;
       }
     }
   }
@@ -301,11 +447,11 @@
 
 .sedona-review__input {
   width: 100%;
-  box-sizing: border-box;
   .set-font(18px, 26px, 700);
-  padding-top: 18px;
+  box-sizing: border-box;
+  padding-top: 14px;
   padding-left: 22px;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
   background-color: @basic-grey;
   border: 4px solid transparent;
 
@@ -313,8 +459,15 @@
     width: 258px;
   }
 
+  &--name {
+    @media (min-width: @desktop-width) {
+      width: 100%;
+    }
+  }
+
   &::placeholder {
     color: @basic-black;
+    .set-font(18px, 26px, 700);
   }
 
   &:hover {
@@ -371,15 +524,28 @@
       border-color: @basic-grey-ultradark;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .sedona-review__label-attractions {
   display: block;
+  box-sizing: border-box;
   outline: 2px dotted green;
   position: relative;
   padding-left: 74px;
   padding-top: 19px;
   padding-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 37px;
+  }
 
   &::before {
     content: "";
@@ -446,27 +612,75 @@
 }
 
 .sedona-review__label-review {
+  position: relative;
   padding-bottom: 15px;
   display: block;
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .set-font(21px, 26px, 700);
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      top: 15px;
+      right: 0;
+      background-color: @basic-grey-ultradark-;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 280px;
+    }
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      top: 15px;
+      left: 0;
+      background-color: @basic-grey-ultradark-;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 280px;
+    }
+  }
 }
 
 .sedona-review__review-text {
+  margin: 0;
+  padding: 0;
   border-top: 1px solid @basic-grey-dark;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 51px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 58px;
   }
 }
 
-
 .sedona-review__textarea {
+  outline: 2px dotted black;
   display: block;
   box-sizing: border-box;
   .set-font(18px, 26px, 700);
@@ -474,12 +688,15 @@
   resize: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 51px;
   padding-top: 13px;
   padding-left: 21px;
   padding-right: 23px;
   border: 4px solid transparent;
   background-color: @basic-grey;
+
+  @media (min-width: @tablet-width) {
+    min-height: 160px;
+  }
 
   &::placeholder {
     color: @basic-black;
@@ -503,11 +720,16 @@
   padding-bottom: 13px;
   cursor: pointer;
   text-align: center;
+  font: inherit;
   .set-font(21px, 26px, 700);
   text-transform: uppercase;
   border: none;
   color: @basic-white;
   background-color: @basic-blue-light;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 
   &:hover,
   &:focus {
@@ -522,7 +744,7 @@
 .sedona-review__add-info {
   display: none;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   .set-font(@line-height: 26px);
   text-transform: uppercase;
 
@@ -533,6 +755,6 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    right: 120px;
+    right: 160px;
   }
 }
