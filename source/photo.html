@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Фото и видео Седоны</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body class="page__body">
     <header class="page-header container">
@@ -49,13 +49,13 @@
         </p>
         <ul class="photo-video__list">
           <li class="photo-video__item">
-            <p class="photo-video__photo">
-              <picture>
+            <a href="#">
+              <picture class="photo-video__photo">
                 <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
                 <img class="photo-video__img photo-video__img--first" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография шоссе">
               </picture>
-            </p>
+            </a>
             <div class="photo-video__item-wrapper">
               <h3 class="photo-video__photo-header">
                 Неродные просторы
@@ -78,13 +78,13 @@
             </div>
           </li>
           <li class="photo-video__item">
-            <p class="photo-video__photo">
-              <picture>
+            <a href="#">
+              <picture class="photo-video__photo">
                 <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
                 <img class="photo-video__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография растительности">
               </picture>
-            </p>
+            </a>
             <div class="photo-video__item-wrapper">
               <h3 class="photo-video__photo-header">
                 Местная растительность
@@ -107,13 +107,13 @@
             </div>
           </li>
           <li class="photo-video__item">
-            <p class="photo-video__photo">
-              <picture>
+            <a href="#">
+              <picture class="photo-video__photo">
                 <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
                 <img class="photo-video__img" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография дороги">
               </picture>
-            </p>
+            </a>
             <div class="photo-video__item-wrapper">
               <h3 class="photo-video__photo-header">
                 Дорога на север
@@ -136,13 +136,13 @@
             </div>
           </li>
           <li class="photo-video__item">
-            <p class="photo-video__photo">
-              <picture>
+            <a href="#">
+              <picture class="photo-video__photo">
                 <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
                   <img class="photo-video__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Фотография моста Дьявола">
               </picture>
-            </p>
+            </a>
             <div class="photo-video__item-wrapper">
               <h3 class="photo-video__photo-header">
                 Мост Дьявола
@@ -248,5 +248,6 @@
         </a>
       </p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

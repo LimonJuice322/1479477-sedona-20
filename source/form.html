@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Форма отзыва о Седоне</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body class="page__body">
     <header class="page-header container">
@@ -101,19 +101,19 @@
               <legend class="sedona-review__legend">Посещенные достопримечательности:</legend>
               <ul class="sedona-review__list sedona-review__list--checkboxes">
                 <li class="sedona-review__item sedona-review__item--attractions sedona-review__item--column-left">
-                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-devil" checked type="checkbox" name="Мост Дьявола" value="">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-devil" checked type="checkbox" name="Мост Дьявола" value="true">
                   <label class="sedona-review__label-attractions" for="attractions-devil">Мост Дьявола</label>
                 </li>
                 <li class="sedona-review__item sedona-review__item--attractions sedona-review__item--column-right">
-                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-bell" checked type="checkbox" name="Гора-Колокол" value="n">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-bell" checked type="checkbox" name="Гора-Колокол" value="true">
                   <label class="sedona-review__label-attractions" for="attractions-bell">Гора-Колокол</label>
                 </li>
                 <li class="sedona-review__item sedona-review__item--attractions sedona-review__item--column-left">
-                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-park" checked type="checkbox" name="Слайд-парк" value="">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-park" checked type="checkbox" name="Слайд-парк" value="true">
                   <label class="sedona-review__label-attractions" for="attractions-park">Слайд-парк</label>
                 </li>
                 <li class="sedona-review__item sedona-review__item--attractions sedona-review__item--column-right">
-                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-rocks" type="checkbox" name="Красные скалы" value="">
+                  <input class="sedona-review__input-attractions visually-hidden" id="attractions-rocks" type="checkbox" name="Красные скалы" value="true">
                   <label class="sedona-review__label-attractions" for="attractions-rocks">Красные скалы</label>
                 </li>
               </ul>
@@ -170,20 +170,26 @@
       </p>
     </footer>
 
-    <section class="modal modal--success">
+    <section class="modal modal--failure">
       <b class="modal__message">Что-то пошло не так!</b>
-      <p class="modal__description">
+      <p class="modal__description modal__description--bottom-margin">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
-      <button class="modal__btn-close" type="button">Ок</button>
+      <button class="modal__btn-close modal__btn-close--failure" type="button">Ок</button>
     </section>
 
-    <section class="modal modal--failure">
+    <section class="modal modal--success">
       <b class="modal__message">Ваш отзыв отправлен!</b>
       <p class="modal__description">
-        Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.
       </p>
-      <button class="modal__btn-close" type="button">Закрыть окно</button>
+      <p class="modal__description modal__description--bottom-margin">
+        В ближайшее время мы опубликуем его на сайте.
+      </p>
+      <div class="modal__decor-background">
+        <button class="modal__btn-close modal__btn-close--success" type="button">Закрыть окно</button>
+      </div>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>

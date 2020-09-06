@@ -4,13 +4,13 @@
 
 .sedona-review__wrapper {
   @media (min-width: @tablet-width) {
-    outline: 2px dotted green;
+    position: relative;
     width: calc(768px - 120px);
     margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    outline: 2px dotted orange;
+    position: relative;
     width: calc(1200px - 240px);
     margin: 0 auto;
   }
@@ -22,7 +22,6 @@
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
-  outline: 2px dotted blue;
   padding-top: 36px;
   padding-bottom: 28px;
 
@@ -46,7 +45,6 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    outline: 2px dotted black;
     width: 435px;
     padding-bottom: 60px;
   }
@@ -64,7 +62,6 @@
 }
 
 .sedona-review__fieldset {
-  outline: 2px dotted red;
   position: relative;
   padding: 0;
   padding-top: 65px;
@@ -180,7 +177,6 @@
 }
 
 .sedona-review__legend {
-  outline: 2px dotted yellow;
   position: absolute;
   width: 320px;
   top: 20px;
@@ -201,7 +197,6 @@
 }
 
 .sedona-review__list {
-  outline: 2px dotted grey;
   list-style: none;
   padding: 0;
   padding-left: 20px;
@@ -289,7 +284,6 @@
     }
 
     @media (min-width: @desktop-width) {
-      outline: 2px dotted black;
       flex-grow: 1;
       display: flex;
       align-items: center;
@@ -306,7 +300,6 @@
 
   &--impression {
     padding-bottom: 11px;
-    outline: 2px dotted blue;
 
     &:last-child {
       padding-bottom: 26px;
@@ -348,7 +341,6 @@
   display: block;
   .set-font(@line-height: 26px);
   text-transform: uppercase;
-  outline: 2px dotted red;
 
   &--name {
     padding-right: 8px;
@@ -488,7 +480,6 @@
 
 .sedona-review__label-impression {
   display: block;
-  outline: 2px dotted green;
   position: relative;
   padding-left: 74px;
   padding-top: 19px;
@@ -533,7 +524,6 @@
 .sedona-review__label-attractions {
   display: block;
   box-sizing: border-box;
-  outline: 2px dotted green;
   position: relative;
   padding-left: 74px;
   padding-top: 19px;
@@ -676,11 +666,11 @@
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 58px;
+    border-top: none;
   }
 }
 
 .sedona-review__textarea {
-  outline: 2px dotted black;
   display: block;
   box-sizing: border-box;
   .set-font(18px, 26px, 700);
@@ -750,11 +740,11 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    right: 60px;
+    right: 0;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
-    right: 160px;
+    right: 0;
   }
 }
