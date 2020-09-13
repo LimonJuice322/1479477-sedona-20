@@ -5,8 +5,12 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-around;
-    padding-top: 60px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: center;
+    padding-top: 0;
   }
 }
 
@@ -21,5 +25,12 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
+    margin-left: 45px;
+    margin-right: 97px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 104px;
+    margin-right: 254px;
   }
 }

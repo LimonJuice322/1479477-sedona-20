@@ -7,19 +7,47 @@
   text-align: center;
   .set-font(@line-height: 26px);
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 105px;
+    margin-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 261px;
+    margin-right: 105px;
+  }
 }
 
 .copyright__signature {
   padding-left: 15px;
 
+  @media (min-width: @tablet-width) {
+    padding-left: 25px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-left: 10px;
+    padding-left: 15px;
   }
 }
 
 .copyright__ref {
   margin-left: 15px;
   display: block;
+
+  &:hover,
+  &:focus {
+    .copyright__icon {
+      fill: @basic-blue-light;
+    }
+  }
+
+  &:active {
+    .copyright__icon {
+      fill: @basic-black;
+      fill-opacity: 0.3;
+    }
+  }
 }
 
 .copyright__icon {

@@ -53,19 +53,32 @@
   padding: 0;
   margin: 0;
   padding-top: 55px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   text-align: center;
   .set-font(18px, 26px, 700);
   text-transform: uppercase;
 
   &--incomplete {
     @media (max-width: @tablet-width) {
-      padding-top: 26px;
+      padding-top: 25px;
+    }
+
+    @media (min-width: @tablet-width) {
+      padding-top: 43px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 43px;
     }
   }
 
   &--full {
-    padding-top: 39px;
+    padding-top: 53px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 40px;
+      padding-bottom: 0;
+    }
 
     @media (min-width: @desktop-width) {
       width: 140px;
@@ -74,28 +87,28 @@
     }
   }
 
+  &--top-padding {
+    @media (max-width: @tablet-width) {
+      padding-top: 39px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     margin: 0 auto;
     width: 152px;
     .set-font(21px, 26px, 700);
-
-    &--pos-lower {
-      padding-top: 52px;
-    }
   }
 
   @media (min-width: @desktop-width) {
     width: 152px;
-    padding-top: 43px;
     padding-bottom: 14px;
   }
 }
 
 .sedona-presentation__number {
   display: block;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
   text-align: center;
   text-transform: uppercase;
 
@@ -104,32 +117,32 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 21px;
+    padding-bottom: 24px;
   }
 }
 
 .sedona-presentation__description {
-  width: 277px;
+  width: 257px;
   padding: 0;
   margin: 0 auto;
-  padding-bottom: 39px;
+  padding-bottom: 36px;
   text-align: center;
   text-transform: uppercase;
 
   &--incomplete {
     @media (max-width: @tablet-width) {
-      padding-bottom: 33px;
+      padding-bottom: 23px;
     }
   }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 45px;
-    width: 215px;
+    width: 175px;
   }
 
   @media (min-width: @desktop-width) {
     width: 285px;
-    padding-bottom: 62px;
+    padding-bottom: 59px;
   }
 }
 

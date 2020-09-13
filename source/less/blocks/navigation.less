@@ -99,8 +99,15 @@
     .set-font(14px, 26px, 700);
     box-shadow: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: @basic-blue-light;
+      background-color: @basic-white;
+    }
+
+    &:active {
+      color: @basic-black;
+      opacity: 0.3;
       background-color: @basic-white;
     }
 

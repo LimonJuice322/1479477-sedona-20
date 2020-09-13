@@ -3,11 +3,11 @@
   padding-bottom: 106px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 0;
+    padding-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 30px;
+    padding-bottom: 80px;
   }
 }
 
@@ -38,13 +38,13 @@
   @media (min-width: @tablet-width) {
     .set-font(30px, 26px, 700);
     width: 445px;
-    padding-top: 78px;
+    padding-top: 59px;
   }
 
   @media (min-width: @desktop-width) {
     .set-font(30px, 26px, 700);
     width: 445px;
-    padding-top: 73px;
+    padding-top: 65px;
   }
 }
 
@@ -53,17 +53,13 @@
   padding-bottom: 33px;
   width: 266px;
   text-align: center;
+  color: @basic-black-light;
   .set-font(@line-height: 24px);
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 505px;
-    padding-bottom: 62px;
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 505px;
-    padding-bottom: 65px;
+    padding-bottom: 80px;
   }
 }
 
@@ -170,12 +166,12 @@
 }
 
 .sedona-video__replay-toggle {
-  fill: @special-toggle;
+  display: block;
   position: absolute;
-  width: 16px;
-  height: 20px;
   left: 25px;
   top: 22px;
+  background-color: transparent;
+  border: none;
 
   &:hover {
     cursor: pointer;
@@ -205,12 +201,13 @@
 }
 
 .sedona-video__fullscreen-toggle {
+  display: block;
   fill: @special-toggle;
   position: absolute;
-  width: 20px;
-  height: 20px;
   right: 23px;
   top: 23px;
+  background-color: transparent;
+  border: none;
 
   polygon {
     fill: @special-toggle;
@@ -255,12 +252,13 @@
 }
 
 .sedona-video__subtitles-toggle {
+  display: block;
   fill: @special-toggle;
   position: absolute;
-  width: 32px;
-  height: 20px;
   right: 74px;
   top: 23px;
+  background-color: transparent;
+  border: none;
 
   path {
     fill: @special-toggle;
