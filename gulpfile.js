@@ -24,14 +24,23 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// CSS min
+
+const cssMin = () => {
+  return gulp.src("source/css/*.css")
+        .pipe(csso())
+        .pipe(rename("styles.min.css"))
+        .pipe(gulp.dest("source/css"))
+}
+
+exports.styles = cssMin;
 
 // Images
 
@@ -118,10 +127,11 @@ exports.html = html;
 
 const build = gulp.series(
       clean,
-      copy,
       html,
       js,
       styles,
+      cssMin,
+      copy,
       sprite,
     )
 
