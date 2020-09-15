@@ -1,8 +1,11 @@
-'use strict'
+"use strict"
 
 if (document.querySelector(".navigation__list")) {
+  let nav = document.querySelector(".navigation");
   let menu = document.querySelector(".navigation__list");
   let toggler = document.querySelector(".navigation__toggle-button");
+
+  nav.classList.remove("navigation--nojs");
 
   toggler.addEventListener("click", function() {
     toggler.classList.toggle("navigation__toggle-button--close")
