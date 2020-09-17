@@ -12,6 +12,7 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const minify = require("gulp-minify");
 const htmlmin = require("gulp-htmlmin");
+const ghPages = require("gulp-gh-pages");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -34,7 +35,7 @@ exports.styles = styles;
 // CSS min
 
 const cssMin = () => {
-  return gulp.src("source/css/*.css")
+  return gulp.src("source/css/style.css")
         .pipe(csso())
         .pipe(rename("styles.min.css"))
         .pipe(gulp.dest("source/css"))
@@ -122,6 +123,15 @@ const html = () => {
 }
 
 exports.html = html;
+
+// gh-pages
+
+const gh_pages = () => {
+  return gulp.src("./source/**/*")
+        .pipe(ghPages())
+}
+
+exports.gh_pages = gh_pages;
 
 // Build
 
